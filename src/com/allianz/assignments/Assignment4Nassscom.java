@@ -1,4 +1,4 @@
-package com.allianz.basics;
+package com.allianz.assignments;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

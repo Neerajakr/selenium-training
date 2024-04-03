@@ -1,4 +1,4 @@
-package com.allianz.basics;
+package com.allianz.assignments;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +17,7 @@ public class Assignment3Meddibuddy {
 		 driver.get("https://www.medibuddy.in/");
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		// driver.findElement(By.xpath("//a[contains(@href,'javascript:void(0)')]")).click();
-		 //driver.findElement(By.xpath("//a[@class='wzrkClose']")).click();
+//		 driver.findElement(By.xpath("//a[@class='wzrkClose']")).click();
 		 driver.findElement(By.xpath("//a[text()='Login']")).click();
 		 driver.findElement(By.xpath("//div[@class='coperate']")).click();
 		 driver.findElement(By.linkText("Learn More")).click();
