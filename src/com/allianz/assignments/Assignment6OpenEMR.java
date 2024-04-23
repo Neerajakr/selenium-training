@@ -37,8 +37,16 @@ public class Assignment6OpenEMR {
 		 
 		 driver.findElement(By.id("form_DOB")).sendKeys("2024-04-02");
 		 driver.findElement(By.id("create")).click();
-		 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='modalframe']")));
+//		 driver.switchTo().frame(0);
+		 driver.switchTo().frame(driver.findElement(By.id("modalframe")));
 		 driver.findElement(By.xpath("//button[contains(text(),'Confirm')]")).click();
+		 
+//		 /html/body/div[2]/div/div/div[2]/iframe
+		 
+		//*[@id="modalframe"]
+		 
+		 
+		 //Confirm Create New Patient
 
          System.out.println("End ");
 //         driver.close();
