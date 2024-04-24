@@ -16,8 +16,9 @@ public class Assignment3Meddibuddy {
 		 driver.manage().window().maximize();
 		 driver.get("https://www.medibuddy.in/");
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		// driver.findElement(By.xpath("//a[contains(@href,'javascript:void(0)')]")).click();
-//		 driver.findElement(By.xpath("//a[@class='wzrkClose']")).click();
+		 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='wiz-iframe']")));
+		 driver.findElement(By.xpath("//a[@class='wzrkClose']")).click();
+		 driver.switchTo().defaultContent();
 		 driver.findElement(By.xpath("//a[text()='Login']")).click();
 		 driver.findElement(By.xpath("//div[@class='coperate']")).click();
 		 driver.findElement(By.linkText("Learn More")).click();
