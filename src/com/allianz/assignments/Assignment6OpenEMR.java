@@ -32,7 +32,7 @@ public class Assignment6OpenEMR {
 		 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='pat']")));
 		 driver.findElement(By.xpath("//input[@name='form_fname']")).sendKeys("test");
 		 driver.findElement(By.name("form_lname")).sendKeys("patient");
-		 driver.findElement(By.id("form_DOB")).sendKeys("2024-04-24");
+		 driver.findElement(By.id("form_DOB")).sendKeys("2024-04-25");
 		 
 		 Select gender= new Select(driver.findElement(By.id("form_sex")));
 		 gender.selectByValue("Female");
@@ -46,10 +46,10 @@ public class Assignment6OpenEMR {
 		 driver.switchTo().frame(driver.findElement(By.id("modalframe")));
 		 driver.findElement(By.xpath("//button[contains(text(),'Confirm')]")).click();
 		 
-		 WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
+		 WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(10));
 	     wait.until(ExpectedConditions.alertIsPresent());    
 	     String actualAlertText=driver.switchTo().alert().getText();
-	     System.out.println(actualAlertText);
+	     System.out.println(actualAlertText); 
 	     driver.switchTo().alert().accept();
 	        
 	     driver.findElement(By.xpath("//div[@class='closeDlgIframe']")).click();
